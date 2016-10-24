@@ -1,0 +1,20 @@
+\begin{exercise}{6}
+
+\[M = (\{q_0, q_1, q_2, q_3, q_4, \bar{q}\}, \{0, 1\}, \{0, 1, B\}, B, q_0, \bar{q}, \delta)\]
+
+\[\begin{array}{c|ccc}
+\delta&0&1&B\\\hline
+q_0&(q_0,0,R)&(q_0,1,R)&(q_1,B,L)\\
+q_1&(q_2,0,L)&(q_2,1,R)&(\bar{q},B,N)\\
+q_2&(q_3,1,L)&(q_4,0,L)&(\bar{q},1,N)\\
+q_3&(q_3,0,L)&(q_3,1,L)&(\bar{q},B,R)\\
+q_4&(q_3,1,L)&(q_4,0,L)&(\bar{q},1,N)\\
+\end{array}\]
+
+Die Turingmaschine startet im Zustand $q_0$. In diesem l\"auft der Kopf solange nach rechts, bis ein Blank erreicht wurde. Dann wechselt die TM in den Zustand $q_1$ und geht einen Schritt zur\"uck nach links. Ist der Input nicht leer, steht der Kopf nun auf dem niedrigstwertigen Bit. Sollte dies ein Blank sein, ist der Input leer und die TM terminiert sofort mit dem Output $\epsilon$. Andernfalls bewegt die TM den Kopf noch einen Schritt nach links, denn das letzte Bit bleibt bei Addition mit 2 unver\"andert. 
+
+Nun befindet sich die TM im Zustand $q_2$. Der Kopf steht auf dem zweitletzten Bit. Ist dies ein Blank, war der Input nur einstellig. Die TM schreibt eine 1 und terminiert. Andernfalls beginnt die Berechnung der Addition mit \"Ubertrag: Hat das zweitletzte Bit den Wert 0, wird eine 1 geschrieben, der Kopf nach links auf das n\"achsth\"ohere Bit bewegt und in den Zustand $q_3$ gewechselt, der symbolisiert, dass kein \"Ubertrag existiert. Ist der Wert hingegen 1, wird eine 0 geschrieben und der n\"achste Zustand ist $q_4$, in dem der \"Ubertrag ber\"ucksichtigt wird.
+
+Im Zustand $q_3$ existiert kein \"Ubertrag, die eigentliche Addition ist abgeschlossen. Daher l\"auft die TM im Zustand $q_3$ einfach nach links durch, bis sie auf ein Blank trifft. Dann bewegt sie den Kopf ein Feld zur\"uck, um auf dem ersten Feld des Outputs zu stehen, und terminiert. Wenn im Zustand $q_4$ eine 0 gelesen wird, kann der \"Ubertrag durch Schreiben einer 1 abgearbeitet werden und die TM wechselt in $q_3$. Liest die TM hingegen eine 1, wird an die Stelle eine 0 geschrieben und die TM verbleibt in $q_4$, da der \"Ubertrag weitergetragen werden muss. Trifft die TM in $q_4$ auf ein Blank, so kann der \"Ubertrag dort eingetragen werden und die TM terminiert. 
+
+\end{exercise}

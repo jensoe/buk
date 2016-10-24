@@ -1,0 +1,7 @@
+\begin{exercise}{5}
+
+\newcommand\XOR{\mathbin{\char`\^}}
+
+Die Maschine berechnet die XOR-Verkn\"upfung des ersten und letzten Bits des Inputs. Ist das erste Bit 0, so besteht der Output aus dem letzten Bit, da $0\XOR A = A$. In diesem Fall geht die TM einfach auf das letzte Inputbit und terminiert dort. Ist das erste Bit 1, ist der Output die Negation des letzten Bits, da $1\XOR A = \bar{A}$. In diesem Fall geht die TM auf das letzte Inputbit und invertiert es, bevor sie terminiert. F\"ur den Spezialfall, dass der Input nur aus einem Bit besteht, ist die Antwort immer 0, da dieses Bit dann mit sich selber verkn\"upft wird und $A\XOR A = 0$.
+
+\end{exercise}

@@ -1,12 +1,14 @@
-\begin{aufgabe}[(a)]
-\teilaufgabe
+\begin{exercise}{4}
+\begin{subexercise}
 $$\Sigma = \left\{ 0,1,\# \right\}$$
 %$$L_{Teilsumme} = \left\{ w \in \Sigma^* | \exists n \in \mathbb{N}: \exists M = {m_1,\ldots,m_n}, \exists b \in \mathbb{N}: w = bin(m_1)\#bin(m_2)\#...\#bin(m_n)\#\#bin(b),\\ \Sigma_{i=1}^n   \right\}$$
 Die Zahlen aus $M$ werden bin\"ar kodiert und durch Rauten getrennt. Anschlie\ss end wird durch eine Doppelraute die Zahl $b$ angeh\"angt. 
 $$C = \{w \in \Sigma^* | \exists n,b \in \mathbb{N}: \exists M = \{m_1,...,m_n\} \subset\mathbb{N}: w = bin(m_1)\#bin(m_2)\#\ldots\#bin(m_n)\#\#bin(b) \}$$
 Ist die Summe einer Teilmenge von $M$ gleich $b$, so geh\"ort das Tupel $(M,b)$ zu $L_{Teilaufgabe}$.
 $$L_{Teilsumme} = \{ v \in C | \exists K \subseteq M: \sum K = b\}$$
-\teilaufgabe
+\end{subexercise}
+
+\begin{subexercise}
 
 $$\Sigma = \{0,1,\#\}$$
 Der Graph $G$ wird als Adjazenzmatrix kodiert.
@@ -14,5 +16,5 @@ $$code(G) \in (0,1)^*$$
 Mit dem Trennzeichen $\#$  wird die Zahl $b$ angeh\"angt. 
 $$C = \{ w \in \Sigma^* |\exists \text{ Graph }G, \exists b \in \mathbb{N}: w=code(G)\#bin(b) \}$$
 $$L_{Clique} = \{ v \in C | \text{G besitzt eine Clique der Gr\"o\ss e b} \}$$
-
-\end{aufgabe}
+\end{subexercise}
+\end{exercise}
